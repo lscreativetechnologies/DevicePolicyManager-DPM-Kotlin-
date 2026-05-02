@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Your outstanding balance is $100. Please pay"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/inputField"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:maxLength="3"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/dialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pay" />
+</LinearLayout>

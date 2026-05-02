@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rootBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Disable Btn"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rootBtn2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Enable Btn"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rootBtn" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="1. Download the application from the given link.\n
+        2. Click and install the application on the device.\n
+        3. Make our Credimex application as the admin by clicking on the Activate this device admin app \n
+        4. Now device admin is enabled.\n
+        5. Re-open our Credimex application.\n
+        6. Our application will be visible in Download services/Apps. Click on our Credimex application.\n
+        7. Please activate our application and allow control of the device.\n
+        8. Now our application is active and you can block any application in the device.\n
+        9. Allow CREDIMEX to find, connect to and determine the relative position of nearby devices.\n
+        10. Disable Play protect from play store click on profile icon-> Play Protect -> off toggle button.\n
+        11. Allow restricted permissions from App Info settings."
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lockApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="All Applications Block"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/unblockApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Unblock apps"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lockApps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Click above button to pop some apps for unblocking just for testing purpose.)"
+        android:textAlignment="center"
+        android:textColor="#878787"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unblockApps" />
+
+    <ScrollView
+        android:id="@+id/homeScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/textGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, Greetings 👋"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Loan Summary Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="4dp"
+                android:radius="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/activeLoanTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active Loan"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textLoanAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="100 MXN"
+                        android:textColor="#4CAF50"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textNextEMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Next EMI: 50 MXN on 10 May"
+                        android:textColor="#888888"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Quick Actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Apply Loan -->
+                <LinearLayout
+                    android:id="@+id/applyLoan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="Apply Loan"
+                        android:src="@drawable/loan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:text="Apply Loan"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Pay EMI -->
+                <LinearLayout
+                    android:id="@+id/payEmi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="Pay EMI"
+                        android:src="@drawable/shopping" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:text="Pay EMI"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- History -->
+                <LinearLayout
+                    android:id="@+id/historyBUtton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="History"
+                        android:src="@drawable/clock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:text="History"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Recent Transactions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Recent Transactions"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Example Transaction Item -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="2dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Money icon"
+                        android:src="@drawable/salary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EMI Payment"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50 MXN - 10 Apr 2025"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/nextBUtton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="24dp"
+                android:backgroundTint="#4CAF50"
+                android:text="Continue to activate device admin"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Device admin layout-->
+    <RelativeLayout
+        android:id="@+id/deviceAdminScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <!-- Illustration (Optional) -->
+        <ImageView
+            android:id="@+id/imageIllustration"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/admin" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageIllustration"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Activate Device Admin"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="12dp"
+            android:text="To help protect your loan account and prevent unauthorized changes, we request Device Admin access.\n\n
+
+This permission allows us to:\n\n
+
+   1. Secure your device in case of misuse or fraud\n\n
+
+   2. Enforce safety measures if loan terms are violated\n\n
+
+   3. Prevent factory reset or unauthorized uninstall attempts\n\n
+
+We do not access your personal data. This is strictly for maintaining device security and ensuring compliance with your loan agreement."
+            android:textAlignment="center"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <!-- CTA Button -->
+        <Button
+            android:id="@+id/btnEnableAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="24dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Continue"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <!--Accessibility activate layout-->
+    <RelativeLayout
+        android:id="@+id/accessibilityScreen"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <!-- Illustration (Optional) -->
+        <ImageView
+            android:id="@+id/imageIllustration1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/lock" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageIllustration1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Enable Accessibility Access"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textDescription1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="To protect your loan account and prevent unauthorized activity, please enable Accessibility Access. We use this only to secure your device in case of fraud or misuse as per your loan agreement."
+            android:textAlignment="center"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <!-- CTA Button -->
+        <Button
+            android:id="@+id/btnEnableAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="24dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Enable Accessibility"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,818 @@
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeViewClicked"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:canRetrieveWindowContent="false"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="100"
+
+
+    android:packageNames="com.android.settings, com.whatsapp, com.facebook.katana, com.instagram.android, com.instagram.lite, com.example.accessibilitymonitor, com.android.chrome,
+com.google.android.apps.messaging, com.qti.confuridialer, com.android.bbk.phone, com.motorola.dialer, com.asus.dialer, com.android.contacts, com.truecaller, com.android.camera, com.google.android.calendar, com.google.android.apps.photos, com.android.phone,
+com.android.vending, com.google.android.dialer, com.samsung.android.dialer, com.android.incallui, com.android.dialer, com.oneplus.dialer, com.coloros.dialer,com.oppo.mobile.lic,
+com.nokia.phone, com.android.messaging, com.samsung.android.messaging, com.zte.mms, com.coloros.mms, com.oneplus.messaging, com.oneplus.gallery, com.sec.android.gallery3d,
+com.oppo.gallery3d, com.mi.android.gallery, com.zte.mms, com.android.gallery3d, com.samsung.android.email.provider, com.google.android.gm, com.mi.android.email,
+com.oppo.email, com.android.email, com.google.android.youtube, com.google.android.apps.maps, com.android.contacts, com.samsung.android.contacts, com.google.android.contacts,
+com.oppo.contacts, com.zte.contacts, com.zte.settings, com.coloros.settings, com.samsung.android.settings, com.sec.android.app.myfiles, com.mi.android.globalFileexplorer,
+com.coloros.filemanager, com.android.documentsui, com.vivo.filemanager, com.vivo.settings, com.vivo.contacts, com.vivo.camera, com.vivo.email, com.vivo.dialer, com.vivo.messaging,
+com.vivo.gallery, com.facebook.lite, com.twitter.android, com.threads.app, com.zhiliaoapp.musically, org.telegram.messenger, com.reddit.frontpage, com.snapchat.android,
+com.facebook.orca, com.google.android.googlequicksearchbox, org.mozilla.firefox, com.google.android.music, com.google.android.apps.youtube.music, com.spotify.music,
+com.huawei.camera, com.huawei.photos, com.huawei.email, com.huawei.android.dialer, com.huawei.contacts, com.huawei.android.tms, com.huawei.himaps, com.google.android.apps.docs,
+com.huawei.hidisk, com.motorola.settings, com.motorola.gallery, com.motorola.camera2, com.motorola.contacts, com.motorola.filemanager, com.motorola.email,
+com.alcatel.gallery, com.alcatel.filemanager, com.motorola.mobiledesktop.core,com.motorola.android.launcher.overlay.koodo
+                 ,com.motorola.android.launcher.overlay.telus
+                 ,com.google.android.ext.services
+                 ,com.google.android.apps.googleassistant
+                 ,com.google.android.apps.tachyon
+                 ,com.motorola.motocare
+                 ,com.android.providers.telephony,com.android.dynsystem
+                 ,com.google.android.cellbroadcastservice
+                 ,com.motorola.revoker.services
+                 ,com.android.providers.calendar
+                 ,com.motorola.vzw.pco.extensions.pcoreceiver
+                 ,com.android.providers.media
+                 ,com.motorola.bug2go
+                 ,com.android.wallpapercropper
+                 ,com.google.android.federatedcompute
+                 ,com.motorola.gesture
+                 ,com.motorola.android.fmradio
+                 ,com.android.phone.overlay.motcommon
+                 ,com.android.cellbroadcast.overlay
+                 ,com.android.externalstorage
+                 ,com.bluetooth.aptxmode
+                 ,com.qualcomm.qti.uceShimService
+                 ,com.android.companiondevicemanager
+                 ,com.android.mms.service
+                 ,com.android.providers.downloads
+                 ,com.motorola.coresettingsext
+                 ,vendor.qti.hardware.cacert.server
+                 ,com.motorola.enterprise.service
+                 ,com.motorola.att.phone.extensions
+                 ,com.android.phone.overlay.carriersettings
+                 ,com.qualcomm.qti.telephonyservice
+                 ,com.motorola.ccc.mainplm
+                 ,vendor.qti.iwlan
+                 ,com.google.android.providers.media.module
+                 ,com.motorola.nfwlocationattribution
+                 ,com.android.systemui.plugin.globalactions.wallet
+                 ,com.android.providers.downloads.ui
+                 ,com.android.vending
+                 ,com.android.pacprocessor
+                 ,com.dolby.daxservice
+                 ,com.motorola.faceunlock
+                 ,com.google.android.adservices.api
+                 ,com.android.internal.systemui.navbar.hidegestural
+                 ,com.android.certinstaller
+                 ,com.android.carrierconfig
+                 ,com.qti.qualcomm.datastatusnotification
+                 ,com.qualcomm.wfd.service
+                 ,com.motorola.android.provisioning
+                 ,com.android.cellbroadcastservice.overlay
+                 ,com.motorola.msimsettings.overlay
+                 ,com.motorola.systemui.desk
+                 ,com.motorola.hiddenmenuapp
+                 ,com.google.android.sdksandbox
+                 ,com.android.egg
+                 ,com.android.mtp
+                 ,com.android.nfc
+                 ,com.android.ons
+                 ,com.android.stk
+                 ,com.android.backupconfirm
+                 ,org.codeaurora.ims
+                 ,com.android.wifi.resources.overlay.motCommon
+                 ,com.motorola.android.overlay.qcom.common
+                 ,com.google.android.permissioncontroller
+                 ,com.qualcomm.qti.dynamicddsservice
+                 ,com.qualcomm.qti.xrvd.service
+                 ,com.qualcomm.qcrilmsgtunnel
+                 ,com.android.providers.settings
+                 ,com.android.sharedstoragebackup
+                 ,com.google.android.overlay.modules.ext.services
+                 ,com.android.se
+                 ,com.android.inputdevices
+                 ,com.google.android.apps.wellbeing
+                 ,com.motorola.android.nativedropboxagent
+                 ,com.motorola.nfc
+                 ,com.android.bips
+                 ,com.qti.dpmserviceapp
+                 ,com.google.android.modulemetadata
+                 ,com.android.cellbroadcastreceiver
+                 ,com.google.android.networkstack
+                 ,com.android.server.telecom
+                 ,com.motorola.android.providers.settings
+                 ,com.android.keychain
+                 ,com.android.service.ims
+                 ,com.google.android.packageinstaller
+                 ,com.google.android.gms
+                 ,com.google.android.gsf
+                 ,com.google.android.tts
+                 ,com.android.phone.overlay.common
+                 ,com.android.calllogbackup
+                 ,com.android.cameraextensions
+                 ,com.android.localtransport
+                 ,com.android.carrierdefaultapp
+                 ,com.qualcomm.qti.remoteSimlockAuth
+                 ,com.motorola.lifetimedata
+                 ,com.motorola.appdirectedsmsproxy
+                 ,com.android.proxyhandler
+                 ,com.android.providers.telephony.overlay.carriersettings
+                 ,com.motorola.thermalservice
+                 ,com.qualcomm.qti.workloadclassifier
+                 ,com.motorola.carrierconfig
+                 ,com.google.android.overlay.modules.permissioncontroller.forframework
+                 ,com.android.managedprovisioning
+                 ,com.android.soundpicker
+                 ,com.google.mainline.telemetry
+                 ,com.motorola.spectrum.setup.extensions
+                 ,com.motorola.paks
+                 ,com.motorola.dynamicvolume
+                 ,com.motorola.carriersettingsext
+                 ,com.motorola.freeform
+                 ,com.google.mainline.adservices
+                 ,com.android.wifi.resources.overlay.WifiVodafoneOverlay
+                 ,com.motorola.safetycenter.resources.overlay
+                 ,com.motorola.android.systemui.overlay.sprint
+                 ,com.motorola.dciservice
+                 ,com.google.android.gms.supervision
+                 ,com.android.storagemanager
+                 ,com.motorola.msimsettings
+                 ,com.qualcomm.qti.cne
+                 ,com.qualcomm.qti.uim
+                 ,com.google.android.overlay.modules.captiveportallogin.forframework
+                 ,com.qualcomm.location
+
+                 ,com.google.android.overlay.modules.modulemetadata.forframework
+                 ,com.qualcomm.qti.uimGbaApp
+                 ,com.android.vpndialogs,com.motorola.bach.modemstats
+                 ,com.android.phone
+                 ,com.android.shell
+                 ,com.android.wallpaperbackup
+                 ,com.android.providers.blockednumber
+                 ,com.android.providers.userdictionary
+                 ,com.android.emergency
+                 ,com.motorola.android.systemui.overlay.att
+                 ,com.motorola.android.systemui.overlay.tmo
+                 ,com.motorola.android.systemui.overlay.usc
+                 ,com.motorola.android.systemui.overlay.vzw
+                 ,com.qualcomm.qti.xrcb
+                 ,com.android.location.fused
+
+                 ,com.google.android.ondevicepersonalization.services
+                 ,com.qti.phone
+
+                 ,com.android.traceur
+                 ,com.motorola.discovery
+                 ,com.motorola.overlay.launcher3
+                 ,com.qti.qcc
+                 ,com.qualcomm.qtil.btdsda
+                 ,com.android.bluetooth
+                 ,com.qualcomm.timeservice
+                 ,com.qualcomm.atfwd
+                 ,com.qualcomm.embms
+                 ,com.android.providers.contacts
+                 ,vendor.qti.imsrcs,com.factory.mmigroup
+                 ,com.google.android.ext.services
+                 ,com.qualcomm.qti.improvetouch.service
+                 ,com.android.providers.telephony
+                 ,com.android.dynsystem
+                 ,com.android.providers.calendar
+                 ,com.android.providers.media
+                 ,com.qti.service.colorservice
+                 ,com.android.wallpapercropper
+                 ,com.bsp.catchlog
+                 ,com.xiaomi.cameratools
+                 ,com.wt.secret_code_manager
+                 ,com.android.externalstorage
+                 ,com.qualcomm.uimremoteclient
+                 ,com.factory.cit
+                 ,com.qualcomm.qti.uceShimService
+                 ,com.android.companiondevicemanager
+                 ,com.android.mms
+                 ,com.android.providers.downloads
+                 ,vendor.qti.hardware.cacert.server
+                 ,com.qualcomm.qti.telephonyservice
+                 ,com.android.partnerbrowsercustomizations.tmobile
+                 ,com.android.theme.icon_pack.circular.themepicker
+                 ,vendor.qti.iwlan
+                 ,com.qualcomm.uimremoteserver
+                 ,com.qti.confuridialer
+                 ,android.qvaoverlay.common
+                 ,com.android.providers.downloads.ui
+                 ,com.android.vending
+                 ,com.android.pacprocessor
+                 ,com.android.simappdialog
+                 ,android.overlay.common
+                 ,com.android.certinstaller
+                 ,com.android.carrierconfig
+                 ,com.google.android.marvin.talkback
+                 ,com.qti.qualcomm.datastatusnotification
+                 ,android
+                 ,com.qualcomm.qti.callfeaturessetting
+                 ,com.qualcomm.wfd.service
+                 ,com.qti.qualcomm.deviceinfo
+                 ,com.android.egg
+                 ,com.android.mtp
+                 ,com.android.nfc
+                 ,com.android.ons
+                 ,com.android.stk
+                 ,com.android.backupconfirm
+                 ,com.mmigroup.fmradio
+                 ,org.codeaurora.ims
+                 ,android.overlay.target
+                 ,com.qti.pasrservice
+                 ,com.google.android.permissioncontroller
+                 ,com.wingtech.setupwizardext
+                 ,com.qualcomm.qti.dynamicddsservice
+                 ,com.qualcomm.qcrilmsgtunnel
+                 ,com.android.providers.settings
+                 ,com.android.sharedstoragebackup
+                 ,com.qualcomm.qti.services.systemhelper
+                 ,com.android.wifi.resources.overlay.common
+                 ,com.google.android.overlay.modules.ext.services
+                 ,com.miui.bugreport
+                 ,com.android.se
+                 ,com.android.inputdevices
+                 ,com.google.android.apps.wellbeing
+                 ,com.qti.dpmserviceapp
+                 ,com.wing.wtsarcontrol
+                 ,com.qti.xdivert
+                 ,com.google.android.modulemetadata
+                 ,com.android.cellbroadcastreceiver
+                 ,com.qualcomm.qti.simsettings
+                 ,com.google.android.networkstack
+                 ,com.android.server.telecom
+                 ,com.android.cellbroadcastservice
+                 ,com.android.theme.icon_pack.rounded.themepicker
+                 ,com.android.keychain
+                 ,com.android.wifi.resources.overlay.target
+                 ,com.google.android.packageinstaller
+                 ,com.google.android.gms
+                 ,com.google.android.gsf
+                 ,com.google.android.tts
+                 ,com.google.android.gmsintegration
+                 ,com.android.phone.overlay.common
+                 ,com.qualcomm.qti.qtisystemservice
+                 ,com.android.carrierconfig.overlay.common
+                 ,com.android.calllogbackup
+                 ,com.android.systemui.overlay.common
+                 ,com.android.server.telecom.overlay.common
+                 ,com.android.localtransport
+                 ,com.android.carrierdefaultapp
+                 ,com.qualcomm.qti.remoteSimlockAuth
+                 ,com.qualcomm.qti.devicestatisticsservice
+                 ,com.android.proxyhandler
+                 ,com.sensetime.faceunlock
+                 ,com.qualcomm.qti.workloadclassifier
+                 ,com.miui.spock
+                 ,com.google.android.overlay.modules.permissioncontroller.forframework
+
+                 ,com.android.soundpicker
+                 ,com.goodix.fingerprint.setting
+                 ,com.google.mainline.telemetry
+                 ,com.android.wallpaper.livepicker
+                 ,com.mi.AutoTest
+                 ,com.android.batterywarning
+                 ,com.google.android.networkstack.permissionconfig
+                 ,com.qualcomm.qti.cne
+                 ,com.qualcomm.qti.ims
+                 ,com.qualcomm.qti.lpa
+                 ,com.qualcomm.qti.smq
+                 ,com.qualcomm.qti.uim
+                 ,com.android.networkstack.tethering.inprocess
+                 ,com.qualcomm.location
+                 ,com.google.android.overlay.modules.modulemetadata.forframework
+                 ,com.qualcomm.qti.uimGbaApp
+                 ,com.caf.fmradio
+                 ,com.android.vpndialogs
+                 ,com.android.phone
+                 ,com.android.shell
+                 ,com.android.theme.icon_pack.filled.themepicker
+                 ,com.android.wallpaperbackup
+                 ,com.android.providers.blockednumber
+                 ,com.android.providers.userdictionary
+                 ,com.android.providers.media.module
+                 ,com.android.emergency
+                 ,com.qualcomm.qti.seccamservice
+                 ,com.qualcomm.qti.qdma
+                 ,com.android.location.fused
+
+                 ,com.android.managedprovisioning
+                 ,com.android.bluetoothmidiservice
+                 ,com.qualcomm.qti.confdialer
+                 ,com.qualcomm.qti.poweroffalarm
+                 ,com.qti.ltebc
+                 ,com.qualcomm.qti.networksetting
+
+                 ,com.android.traceur
+                 ,com.qualcomm.qti.qccauthmgr
+                 ,com.android.apppredictionservice
+                 ,com.android.bluetooth
+                 ,com.qualcomm.timeservice
+                 ,com.qualcomm.qcrilmsgtunnel,
+                 com.samsung.android.camera,
+                 com.lava.camera,
+                 com.nokia.camera,
+                 com.lge.camera,
+                 com.huawei.ohos.camera,
+                 com.huawei.camerakit.impl,
+                 com.huawei.cvIntl60,
+com.android.calendar,
+com.huawei.android.totemweather,
+com.huawei.appmarket,
+com.huawei.wallet,
+com.huawei.health,
+com.huawei.KoBackup,
+com.huawei.desktop.explorer,
+com.huawei.gamebox,
+com.huawei.hicare,
+com.huawei.hisuite,
+com.huawei.clone,
+com.huawei.smartcare,
+com.huawei.appmarket,
+com.huawei.hicloud,
+com.huawei.android.pushagent,
+com.huawei.appassistant,
+com.huawei.appmarket,
+com.xiaomi.mipicks,
+com.miui.msa.global,
+com.miui.cloudservice,
+com.miui.cloudbackup,
+com.miui.micloudsync,
+com.miui.voicerecorder,
+com.xiaomi.midrop,
+com.mipay.wallet.id,
+com.mipay.wallet.in,
+com.miui.videoplayer,
+com.miui.player,
+com.xiaomi.calendar,
+com.miui.notes,
+com.miui.calculator
+com.miui.gallery,
+com.mi.globalbrowser,
+com.miui.weather2,
+com.miui.mishare.connectivity,
+com.mi.health,
+com.miui.securitycenter,
+com.mi.android.globalFileexplorer,
+com.mi.android.globalminusscreen
+com.miui.screenrecorder,
+com.xiaomi.scanner,
+com.miui.compass,
+com.miui.fm,
+com.miui.bugreport,
+com.miui.yellowpage,
+com.miui.touchassistant
+com.miui.miwallpaper,
+com.mi.android.globallauncher,
+com.miui.analytics,
+com.miui.system,
+com.miui.cloudbackup,
+com.miui.cloudservice,
+com.miui.micloudsync,
+com.miui.global.packageinstaller,
+com.xiaomi.discovery,
+com.sec.android.app.samsungapps,
+com.samsung.android.voc,
+com.samsung.android.knox,
+com.samsung.android.bixby.agent,
+com.samsung.android.oneconnect,
+com.vivo.launcher,
+com.vivo.browser,
+com.bbk.calendar,
+com.bbk.theme,
+com.vivo.weather,
+com.iqoo.secure,
+com.vivo.compass,
+com.bbk.account,
+com.vivo.vhome,
+com.bbk.VivoKeyguard,
+com.miui.home,
+com.miui.cleanmaster,
+com.miui.backup,
+com.xiaomi.finddevice,
+com.huawei.android.launcher,
+com.huawei.systemmanager,
+com.huawei.dialer,
+com.huawei.hwcontrolcenter,
+com.huawei.harmonyos.foundation,
+com.huawei.thememanager,
+com.huawei.notes,
+com.huawei.music,
+com.huawei.gallery,
+com.huawei.weather,
+com.huawei.calendar,
+com.huawei.filemanager,
+com.huawei.securitymgr,
+com.huawei.systemserver,
+com.huawei.nearby,
+com.huawei.pcassistant,
+com.huawei.hwddmp,
+com.huawei.hwstartupguide,
+com.huawei.featurelayer.sharedfeature.map,
+com.huawei.hms,
+com.huawei.hwid,
+com.huawei.browser,
+com.huawei.video,
+com.huawei.assistant,
+com.motorola.actions,
+com.motorola.aiservices,
+com.motorola.gamemode,
+com.motorola.motocare,
+com.motorola.motodisplay,
+com.motorola.motocit,
+com.motorola.motointelligence,
+com.motorola.mototour,
+com.motorola.msimsettings,
+com.motorola.motocare.internal,
+com.motorola.motocare,
+com.motorola.motodisplay,
+com.motorola.motocit,
+com.motorola.motointelligence,
+com.motorola.mototour,
+com.motorola.msimsettings,
+com.motorola.motocare.,
+com.google.android.photos,
+com.google.android.drive,
+com.google.android.docs,
+com.google.android.sheets,
+com.google.android.slides,
+com.google.android.keep,
+com.google.android.apps.nbu.paisa.user,
+com.google.android.calendar,
+com.google.android.apps.photos,
+com.google.android.apps.nbu.files,
+com.google.android.apps.safetyhub,
+com.google.android.apps.podcasts,
+com.google.android.apps.chromecast.app,
+com.google.android.videos,
+com.google.android.apps.magazines,
+com.google.android.apps.youtube.music,
+com.google.android.webview,
+com.google.android.apps.translate,
+com.google.android.play.games,
+com.google.android.gms,
+com.google.android.youtube.kids,
+com.google.android.apps.fitness,
+com.google.android.fit,
+com.google.android.apps.subscriptions.red,
+com.google.android.apps.authenticator2,
+com.google.android.messaging,
+com.google.android.assistant,
+com.google.android.search,
+com.google.android.gboard,
+com.motorola.orange.aura.oobe,
+com.motorola.demo,
+com.miui.hybrid,
+com.xiaomi.payment,
+com.xiaomi.mipay.wallet.id,
+com.xiaomi.mipay.wallet.in,
+com.xiaomi.mirecycle,
+com.xiaomi.milink.service,
+com.xiaomi.glgm,
+com.xiaomi.simactivate.service,
+com.xiaomi.smarthome,
+com.xiaomi.xmsf,
+com.facebook.appmanager,
+com.facebook.services,
+com.facebook.system,
+com.autonavi.minimap,
+com.duokan.phone.remotecontroller,
+com.duokan.phone.remotecontroller.peel.plugin,
+com.netflix.partner.activation,
+com.netflix.mediaclient,
+com.opera.app.news,
+com.opera.branding,
+com.opera.mini.native,
+com.opera.preinstall,
+com.xiaomi.account,
+com.xiaomi.gamecenter,
+com.miui.contacts,
+com.miui.mms,
+com.miui.dialer,
+com.xiaomi.mipicks,
+com.xiaomi.mimanager,
+com.miui.migration,
+com.samsung.android.sms,
+com.samsung.android.calendar,
+com.samsung.android.memos,
+com.samsung.android.camera.livephoto,
+com.samsung.android.gallery,
+com.samsung.android.music,
+com.samsung.android.recovery,
+om.samsung.android.bixby,
+com.samsung.android.bixby.wakeup,
+com.samsung.android.samsungpass,
+com.samsung.android.samsungmembers,
+com.samsung.android.app.smartthings,
+com.samsung.android.app.sbrowser,
+com.samsung.android.shealth,
+com.samsung.android.widgetapp,
+com.samsung.android.dreams.phototile,
+com.samsung.android.app.galaxyfinder,
+com.samsung.android.app.locksecret,
+com.samsung.android.easysetup,
+com.samsung.android.visionintelligence,
+com.samsung.android.app.wellbeing,
+com.samsung.android.smarttutor,
+com.google.android.maps,
+com.samsung.android.app.carrierportal,
+com.samsung.android.app.callblocker,
+com.samsung.android.app.samsungapps,
+com.samsung.android.galaxyfinder,
+com.samsung.android.smartcall,
+com.samsung.android.ril,
+com.samsung.android.omadm.agent,
+com.samsung.android.providers.downloads,
+com.samsung.android.app.notes,
+com.samsung.android.galaxyapp,
+com.samsung.android.app.tracker,
+com.samsung.android.mdm,
+com.samsung.android.app.contacts,
+com.vivo.vms,
+com.vivo.notes,
+com.vivo.calendar,
+com.vivo.music,
+com.vivo.video,
+com.vivo.speechinput,
+com.vivo.fingerprint,
+com.vivo.smartassistant,
+com.vivo.smartshare,
+com.vivo.cloud,
+com.vivo.xplan,
+com.vivo.findmyphone,
+com.vivo.xiaomi.findmydevice,
+com.vivo.appstore,
+com.vivo.appmarket,
+com.vivo.theme,
+com.vivo.doswitcher,
+com.vivo.quickreturn,
+com.vivo.security,
+com.vivo.securityservice,
+com.vivo.zenmode,
+com.vivo.smartmotion,
+com.vivo.screenshot,
+com.vivo.miaccount,
+com.vivo.samsung.notes,
+com.alibaba.alipay,
+com.vivo.qq,
+com.vivo.wechat,
+com.nokia.contacts,
+com.nokia.messaging,
+com.nokia.gallery,
+com.nokia.notes,
+com.nokia.calendar,
+com.nokia.clock,
+com.nokia.music,
+com.nokia.shares,
+com.nokia.weather,
+com.nokia.security,
+com.nokia.search,
+com.nokia.wifi,
+com.nokia.migration,
+com.nokia.nstore,
+com.nokia.ovi,
+com.nokia.device,
+com.nokia.android.snake,
+com.amazon.mShop.android.shopping,
+com.microsoft.office,
+com.microsoft.outlook,
+com.microsft.onedrive,
+com.microsoft.launcher,
+com.nokia.messenger,
+com.lava.contacts,
+com.lava.dialer,
+com.lava.messaging,
+com.lava.gallery,
+com.lava.music,
+com.lava.weather,
+com.lava.calendar,
+com.lava.notes,
+com.lava.security,
+com.lava.appstore,
+com.lava.smartassistant,
+com.lava.phoneoptimization,
+com.lava.screenshot,
+com.lava.phoneassistant,
+com.lava.notificationmanager,
+com.lava.securityservice,
+com.lava.filemanager,
+com.lava.smartfeature,
+com.lava.batteryoptimizer,
+com.lava.appguard,
+com.lava.theme,
+com.samsung.android.sbrowser,
+com.linkedin.android,
+com.oppo.dialer,
+com.oppo.messaging,
+com.oppo.camera,
+com.oppo.music,
+com.oppo.weather,
+com.oppo.notes,
+com.oppo.calendar,
+com.oppo.screenshot,
+com.oppo.security,
+com.oppo.filemanager,
+com.oppo.appmarket,
+com.oppo.smartassistant,
+com.oppo.flashlight,
+com.oppo.wifi,
+com.oppo.recovery,
+com.oppo.backuprestore,
+com.oppo.appmanager,
+com.oppo.theme,
+com.oppo.faceunlock,
+com.oppo.fingerprint,
+com.oppo.lockscreen,
+com.oppo.dmt,
+com.oppo.smoothscroll,
+com.oppo.quickreturn,
+com.oppo.vpn,
+com.oppo.systemupdate,
+com.oneplus.contacts,
+com.oneplus.camera,
+com.oneplus.music,
+com.oneplus.notes,
+com.oneplus.security,
+com.oneplus.weather,
+com.oneplus.calendar,
+com.oneplus.screenrecorder,
+com.oneplus.filemanager,
+com.oneplus.gallery3d,
+com.oneplus.smartspace,
+com.oneplus.appmanager,
+com.oneplus.theme,
+com.oneplus.backup,
+com.oneplus.jotter,
+com.oneplus.optimized,
+com.oneplus.gamemode,
+com.oneplus.battery,
+com.oneplus.deviceid,
+com.oneplus.dashcharge,
+com.oneplus.lockscreen,'
+com.oneplus.screenshot,
+com.oneplus.widget,
+com.oneplus.voiceassistant,
+com.oneplus.smartassistant,
+com.oneplus.fingerprint,
+com.oneplus.faceunlock,
+com.oneplus.applocker,
+com.oneplus.dnd,
+com.oneplus.shelf,
+com.amazon.avod.thirdpartyclient,
+com.disney.disneyplus,
+com.hbo.hbonow,
+com.univision.univisionnow,
+com.crunchyroll.crunchyroid,
+com.tubitv.client,
+com.telemundo.android,
+com.pluto.tv,
+com.aztecanow.app,
+com.apple.tv,
+com.zhiliaoapp.musically,
+com.soundcloud.android,
+com.shazam.android,
+com MoonActive.coinmaster,
+com.tencent.ig,
+com.dts.freefireth,
+com.netflix.mediaclient,com.amazon.avod.thirdpartyclient,com.disney.disneyplus,com.hbo.hbonow,com.univision.univisionnow,com.crunchyroll.crunchyroid,com.google.android.youtube,com.tubitv.client,com.telemundo.android,com.pluto.tv,com.aztecanow.app,com.apple.tv,com.zhiliaoapp.musically,com.spotify.music,com.soundcloud.android,com.shazam.android,com.MoonActive.coinmaster,com.tencent.ig,com.dts.freefireth,com.supercell.clashroyale,com.mojang.minecraftpe,com.roblox.client,com.igg.android.lordsmobile,com.playrix.gardenscapes,com.king.candycrushsaga,com.activision.callofduty.shooter,com.miniclip.eightballpool,com.epicgames.fortnite,wp.wattpad,com.audible.application,com.overdrive.mobile.android.libby,com.kobobooks.android,com.google.android.apps.books,com.pixel.art.coloring.color.number,com.picsart.studio,com.adobe.psmobile,com.canva.editor,com.pinterest,com.nytimes.android,bbc.mobile.news.ww,com.eluniversal.android,com.milenio.android,com.excelsior.android,com.imdb.mobile,com.moviepass.android,com.fandango.client,com.cinepolis.cinepolisapp,com.cinemex.cinemexapp,com.espn.score_center,com.foxsports.android,com.lfp.laligasports,tv.twitch.android.app,com.dazn.android,com.duolingo,com.ted.android,com.reddit.frontpage,com.quora.android,no.mobitroll.android,com.redbull.tv,com.sony.crackle.android,com.lionsgate.play,com.nba.basic,com.fubo.tv.android,com.snapchat.android,com.viber.voip,com.whatsapp,com.messenger,com.facebook.katana,com.instagram.android,com.samsung.android.game.gos,com.youtube.music,com.kongregate.mobile,com.gameloft.android.ANMP.GloftNOHM,com.supercell.brawlstars,com.gameloft.android.ANMP.GloftAMHM,com.ea.game.fifa15_row,com.king.candycrushsaga,com.activision.callofduty.shooter,com.vimeo.android.videoapp,com.dailymotion.dailymotion,com.vevo.android,com.showtime.showtimeandroid,com.cbs.app,com.oculus.vrservice,com.google.vr.vrcore,com.samsung.android.vr.ui,com.htc.viveport,com.sony.playstation.vr
+com.clarovideo,
+com.blimey,
+com.pantaya,
+com.tubi.tv,
+com.roku.streaming,
+com.kaltura.android,
+com.bbva.mexico,
+com.banamex,
+com.santander.mexico,
+com.hsbc.mexico,
+com.banorte.mobile,
+com.banorte.afore,
+com.mercadopago,
+com.oxxopay,
+com.kueski.consumer,
+com.coppel.app,
+com.scotiabank.mexico,
+com.nu.bank.android,
+com.paypal.android.p2pmobile,
+com.docplanner.doctoralia,
+com.topdoctors,
+com.medicato,
+com.mediqo,
+com.medeskmeet,
+com.lingokids.singandplay,
+com.buddy.ai,
+com.budgestudios.googleplay.Bluey,
+com.edoki.montessoripreschool,
+com.david.android.languageswitch,
+com.vasundhara.ai.mathscanner,
+org.khansacademy.android,
+com.quizlet.quizletandroid,
+mx.unadm.app,
+com.joytunes.simplypiano,
+com.joytunes.simplyguitar,
+com.hellotalk,
+com.getmimo,
+com.microblink.photomath,
+com.david.android.languageswitch,
+com.roblox.client,
+com.dts.freefireth,
+com.miniclip.eightballpool,
+com.supercell.clashroyale,
+com.supercell.brawlstars,
+com.activision.callofduty.shooter,
+com.moonactive.coinmaster,
+com.ea.gp.fifa,
+com.king.coc,
+com.mytona.cookingdiary,
+com.cartelapps.mexicotv,
+com.qrcodescanner.barcode,
+com.hipercalc.pro,
+com.themaus.wpsapp,
+com.wakdev.wdnfc,
+com.t11.skyviewfree,
+com.canva.editor,
+com.edgepro.quicksettings,
+com.lemon.lvoverseas,
+com.cyberlink.powerdirector.DRA140225_01,
+com.camerasideas.instashot,
+com.nexstreaming.app.kinemasterfree,
+com.wondershare.filmorago,
+com.niksoftware.snapseed,
+com.picsart.studio,
+com.adobe.lrmobile,
+com.vsco.cam,
+com.meitu.meiphotoforxiaomi,
+com.linkedin.android,
+com.microsoft.teams,
+com.microsoft.authenticator,
+us.zoom.videomeetings,
+com.indeed.android.jobsearch,
+com.dgnet.computrabajo,
+com.bbva.movil,
+com.bancoazteca,
+com.mobisystems.office,
+com.dubox.drive,
+com.ubercab,
+com.didiglobal.didi,
+com.inDriver,
+com.taxibeat,
+mx.com.etn.etnturistarlujo,
+com.edwaresoft.transportapp,
+net.triphub.transport.mexico,
+com.mexico.mobile.android,
+com.mytherapy.mytherapyapp,
+com.fahorro.app,
+com.docplanner.doctoralia,
+com.abbott.freestylelibrelink,
+com.mdaware.mdcalc,
+com.sec.android.app.shealth,
+com.flo.health,
+com.xiaomi.hm.health,
+com.fitia,
+com.betterme.bettermeapp,
+com.cool.motivationquotes,
+com.TwentyFiveApps.motivation.life.quotes,
+com.hardy.quotes.everywhere,
+com.inspirationalquotes.funny.love.life.daily.sports.bible.birthday.women.pictures.wallpaper.best,
+com.kk.grow.motivation,
+com.quotesapp.dailylifequotes,
+com.motivational.inspirational.quotes.daily,
+com.techtrixbd.quotexpedia,
+com.Slack,
+com.skype.raider,
+org.thoughtcrime.securesms,
+com.tinder,
+com.bumble.app,
+com.okcupid.okcupid,
+co.hinge.app,
+com.badoo.mobile,
+deezer.android.app,
+com.amazon.mp3,
+com.soundcloud.android,
+com.mmedia.trebel,
+com.jio.media.jiokaraoke3,
+com.airtel.wynk.music,
+com.mmedia.trebel,
+com.upwork.android.apps.main,
+com.fiverr.fiverr,
+com.freelancer,
+com.indeed.android.jobsearch,
+com.glassdoor.app,
+com.workana,
+com.toptal,
+com.guru,
+com.simplyhired,
+com.bmv.syb,
+com.fusionmedia.investing,
+com.yahoo.mobile.client.android.finance,
+com.tradingview.tradingviewapp,
+net.metaquotes.metatrader4,
+com.android.calculator2,
+com.sec.android.app.popupcalculator,
+com.miui.calculator,
+org.whiteglow.quickeycalculator,
+com.digitalchemy.calculatorpad,
+com.hipercalc,
+com.myscript.calculator,
+"
+    android:settingsActivity=".MainActivity" />
