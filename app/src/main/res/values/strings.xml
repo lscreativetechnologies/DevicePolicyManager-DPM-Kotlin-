@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">DevicePolicyManager</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="accessibility_service_description">
+Accessibility Permission Required\n\n
+
+To help manage loan agreements, DevicePolicyManager requests Accessibility access.\n\n
+
+This will allow the app to:\n\n
+
+  1. Monitor specific app usage to enforce loan terms.\n\n
+
+  2. Guide users during repayment by limiting access to certain features if required.\n\n
+
+  3. Prevent misuse of device functionality during a loan default.\n\n
+
+We do not collect personal data through this access. All actions are governed by your loan agreement.\n\n
+
+Enabling this permission helps us ensure responsible use and support you through the repayment process.
+</string>
+</resources>
